@@ -22,7 +22,7 @@ class MLP(torch.nn.Module):
 
         x=self.layer3(x)
 
-        return x
+        return  x
 
 # rnn takes 3d input while mlp only takes 2d input
 class RecNN(torch.nn.Module):
