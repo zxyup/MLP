@@ -91,8 +91,8 @@ PI=math.pi
 NUM=50
 
 if __name__ == '__main__':
-    mlp=MLP().cuda()
-    rnn=RecNN().cuda()
+    mlp=MLP()
+    rnn=RecNN()
 
     # x,y 是普通sinx 的torch tensor
     x =torch.tensor([(num * PI)  for num in numpy.arange(left, right,(right-left)/NUM)],dtype=torch.float32)
@@ -102,8 +102,8 @@ if __name__ == '__main__':
     # input_x和labels是训练网络时候用的输入和标签。
     input_x=x.reshape(-1, 1)
     labels=y.reshape(-1,1)
-    input_x=input_x.cuda()
-    labels=labels.cuda()
+    input_x=input_x
+    labels=labels
 
 
     #训练mlp
